@@ -12,5 +12,9 @@ npm install
 node index.js
 ```
 
+## Demo
+- [Invite it to your server](https://discord.com/oauth2/authorize?client_id=1560816935858470932&permissions=8&integration_type=0&scope=bot+applications.commands)
+- [Play with it in the playground](https://discord.gg/6tdzUVcfvQ)
+
 ## Credits
 - M3rcena - weky minigames package
