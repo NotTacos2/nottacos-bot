@@ -3,7 +3,7 @@ require("dotenv").config();
 const fs = require("node:fs");
 const path = require("node:path");
 const { WekyManager } = require("@m3rcena/weky");
-const { Client, Collection, Events, GatewayIntentBits, MessageFlags, REST, Routes } = require('discord.js');
+const { Client, Collection, Events, GatewayIntentBits, MessageFlags, REST, Routes, ActivityType } = require('discord.js');
 
 const client = new Client({ 
     intents: [
@@ -17,6 +17,9 @@ const client = new Client({
 client.once(Events.ClientReady, (readyClient) => {
     console.log(`Logged in as ${readyClient.user.tag}!`);
     client.wekyManager = new WekyManager(readyClient);
+    client.user.setActivity('AURA Farming', {
+        type: ActivityType.Playing
+    });
 });
 
 client.commands = new Collection();
